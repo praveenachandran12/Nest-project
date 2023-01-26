@@ -1,0 +1,61 @@
+<div class="container mt-3" style="    margin-left: 0px;">
+
+    <h1 style="margin-left: 315px;">View Technologies</h1>
+
+    <table class="table" style="margin-left: 211px;">
+
+        <thead>
+
+            <th> SL Number </th>
+
+            <th> Technology Name </th>
+
+            <th> Institute Name </th>
+
+            <th> Duration </th>
+
+            <th> Location</th>
+
+           
+
+            <th> Fees </th>
+
+            
+
+            <th>Edit Or Delete</th>
+
+            
+
+        </thead>
+
+        <tr *ngFor="let item of Dataarray let i=index" class="table-primary">
+
+            <td> {{i+1}} </td>
+
+            <td> {{item.technologyName}}</td>
+
+            <td> {{item.instituteName}} </td>
+
+            <td> {{item.duration}} </td>
+
+            <td> {{item.location}} </td>
+
+            
+
+            <td> {{item.fees}} </td>
+
+            
+
+            <td><a [routerLink]="['/adminhome/edittech',item.techid]">Edit Or Delete</a></td>
+
+            <!-- <td><a [routerLink]="['/Adminhome/deletecourse',item.courseid]">Delete</a></td> -->
+
+
+
+        </tr>
+
+    </table>
+
+</div>
+
+

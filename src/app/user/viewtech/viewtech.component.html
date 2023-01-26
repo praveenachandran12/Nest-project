@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: grey;
+}
+
+.container {
+  float: right;
+  padding: 0 16px;
+  background-color: #e7aceb;
+font-family: Georgia, 'Times New Roman', Times, serif; 
+text-align: center;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: goldenrod;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  <header id="header" class="fixed-top" >
+    <div class="container d-flex align-items-center" style="background-color: white;">
+  
+      <h1 class="logo me-auto"><a href="index.html">LEARNZILLA</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a [routerLink]="['../about']">About</a></li>
+          
+          <li><a href="viewtech">View Technologies</a></li>
+          <li><a href="Searchtech">Search Technologies </a></li>
+          <li><a href="../guesthome">Logout </a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+  
+      <!-- <a href="courses.html" class="get-started-btn">Get Started</a> -->
+  
+    </div>
+  </header><!-- End Header -->
+  <!-- <form [formGroup]='TechRegisterForm' > -->
+    <br><br><br><br><br>
+<div class="row" style="margin-left: 300px;text-align: center;">
+  <!-- <input type="hidden" formControlname="Techid"> -->
+    
+  <table  >
+        <tr *ngFor="let item of Dataarray let i=index" style="text-align: center;">
+  <div class="column">
+    <div class="card">
+      
+      <div class="container" >
+        <!-- <td><img width="40" src="D:/Five team project Nest/Backend_.Net core/teamproject/teamproject/Resources{{item.image}}" class="rounded-circle" alt="#"></td>    <br><br>                        -->
+       
+             <h4><b><td>{{item.technologyName}} </td></b></h4><br>
+            <td> <b>Institute Name :</b>{{item.instituteName}}</td><br>
+            <td> <b>Duration: </b>{{item.duration}} </td><br>
+            <td><b>Location: </b>{{item.location}}</td><br>
+            <td> <b>Fee: </b>{{item.fees}}</td><br>
+            <td style=" align-content: space-between;"> <b>Description: </b>{{item.description}}</td>  <br><br>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-danger"  (click)="onSubmit(item.techid)">APPLY HERE</button></td>   <br>                
+
+      </div>
+    </div>
+  </div>
+  </tr>
+  </table>
+  
+</div>
+<!-- </form> -->
+</body>
+</html>
+
+
+
+
+
+
+
+

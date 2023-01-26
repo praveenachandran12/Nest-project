@@ -1,0 +1,142 @@
+<!-- W3hubs.com - Download Free Responsive Website Layout Templates designed on HTML5 CSS3,Bootstrap which are 100% Mobile friendly. w3Hubs all Layouts are responsive cross browser supported, best quality world class designs. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Login & Registration Form - W3hubs.com</title>  
+
+</head> 
+
+<body>
+
+    <section id="w3hubs">
+
+        <div class="container" style="    margin-top: -111px;margin-left: 300px;">
+<br><br>
+            <h1>Technology Edit or Delete</h1>
+
+<input type="hidden" formControlname="Techid">
+
+            <div class="row">
+
+                <!-- <div class="col-md-6">
+
+ 
+
+                    <div id="log">
+
+                        <form>
+
+                            <h2>Login</h2>
+
+                            <div class="form-group">
+
+                                <input type="email" class="form-control" placeholder="Username" required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password" class="form-control" placeholder="Password" required>
+
+                            </div>
+
+                            <div class="form-check">
+
+                                <input type="checkbox"> Remember Me
+
+                            </div>
+
+ 
+
+                            <button class="btn btn-dark">Login</button>
+
+                        </form>
+
+ 
+
+                    </div>
+
+                </div> -->
+
+                <div class="col-md-6" style="width: 500px; margin-left: 300px;">
+
+                    <div id="sign">
+
+                        <form [formGroup]="EditregForm">
+
+                            <h2>Edit Technology</h2>
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Technology Name" required formControlName="TechnologyName"/>
+
+                            </div>
+
+ 
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Institute Name" required formControlName="InstituteName"/>
+
+                            </div>
+
+ 
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Duration" required formControlName="Duration"/>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Location" required formControlName="Location"/>
+
+                            </div>
+
+                            <!-- <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Institute Image" required formControlName="Image"/>
+
+                                </div> -->
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" placeholder="Fees" required formControlName="Fees"/>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <textarea type="text" class="form-control" placeholder="Description" required formControlName="Description"></textarea>
+
+                            </div>
+
+ 
+
+                            <button type="submit" class="btn btn-dark" (click)="OnSubmit()">Edit</button><br><br>
+                            <button type="submit" class="btn btn-dark" (click)="OnDelete()">Delete</button>
+
+                        </form>
+
+ 
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

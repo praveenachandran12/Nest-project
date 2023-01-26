@@ -1,0 +1,96 @@
+<head>
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center" style="background-color: white;">
+
+    <h1 class="logo me-auto"><a href="index.html">LEARNZILLA</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a [routerLink]="['../about']">About</a></li>
+        
+        <li><a href="viewtech">View Technologies</a></li>
+        <li><a href="Searchtech">Search Technologies </a></li>
+        <li><a href="../guesthome">Logout </a></li>
+        
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <!-- <a href="courses.html" class="get-started-btn">Get Started</a> -->
+
+  </div>
+</header><!-- End Header -->
+    <h2>SEARCH TECHNOLOGY</h2>
+
+<hr>
+
+
+
+<form [formGroup]= "SearchGroup">
+
+<div >
+
+    <div class="form-group">
+
+        <label for="search">Search Technology</label>
+
+        <div>
+          
+
+            <select id="search"  style="height: 50px; width: 472px;" class="form-control" formControlName="technologyname" (change)="onChange()" > 
+
+
+                <option value="0">select</option>
+
+                
+
+                <option *ngFor="let item  of myTechnology ">{{item.technologyName}}</option>
+
+            </select>
+            <button type="button" style="margin-left: 550px;margin-top:-77px;" class="btn btn-default btn-sm" (click)="reloadCurrentPage()">
+              <span class="glyphicon glyphicon-refresh"></span> 
+              </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</form>
+<body>
+<div class="row" style="margin-left: 300px;text-align: center;">
+ 
+    <table >
+        <tr  *ngFor="let item of Dataarray,let i=index" style="text-align: center;">
+  <div class="column">
+    <div class="card">
+      
+      <div class="container" >
+        <!-- <td><img src="{{item.image}}" height="100px"></td>    <br><br>                        -->
+
+             <h4><b><td>{{item.technologyName}} </td></b></h4><br>
+            <td> <b>Institute Name :</b>{{item.instituteName}}</td><br>
+            <td> <b>Duration: </b>{{item.duration}} </td><br>
+            <td><b>Location: </b>{{item.location}}</td><br>
+            <td> <b>Fee: </b>{{item.fees}}</td><br>
+            <td style=" align-content: space-between;"> <b>Description: </b>{{item.description}}</td> <br><br> 
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-danger"  (click)="onSubmit(item.techid)">APPLY HERE</button></td>   <br>                     
+
+      </div>
+    </div>
+  </div>
+  </tr>
+  </table>
+</div> 
+</body>
+
